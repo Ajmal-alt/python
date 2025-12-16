@@ -1,0 +1,24 @@
+#TYPE CHECKING
+
+
+a='S'
+b='Ajmal'
+x='10'
+y='11'
+z=10
+
+print(type(x))
+print(type(y))
+print(type(z))
+print(type(a))
+print(type(b))
+
+print(x+y)
+print(a+b)
+
+
+
+#TYPE CASTING
+
+
+print(int(x)+int(y))
