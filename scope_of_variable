@@ -1,0 +1,54 @@
+#LOCAL SCOPE
+
+
+def  order():
+    food="Curd Rice"
+    print("Your order is : ", food)
+    
+order()
+
+
+#ENCLOSE SCOPE   
+
+
+def cart():
+    discount=10
+    def checkout():
+        print("Applying discount:",discount)
+    checkout()
+cart()
+
+
+#GLOBAL SCOPE
+
+
+user_id="ajmal"
+def homepage():
+    print("Welcome to the profile page",user_id)
+def profile():
+    print("Welcome to the profile page:",user_id)
+homepage()
+profile()
+
+
+#BUILTIN SCOPE
+
+
+print(__file__)
+
+
+
+#EXAMPLE
+
+
+delivery_partner="swiggy"           #global
+
+def hotel():
+    item="pizza"                    #local
+    
+    def order_now():
+        quantity=2                  #enclosed
+        print(f"ordering {quantity} {item} using {delivery_partner}")
+    order_now()
+
+hotel()
