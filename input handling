@@ -1,0 +1,29 @@
+#INPUT HANDLING BY TYPE CASTING
+
+a=int(input("Enter the number a : "))
+b=int(input("Enter the number b : "))
+print(a+b)
+
+
+
+#SYS.ARGV
+
+import sys
+full_name = sys.argv[1]
+last_name = sys.argv[2]
+email = full_name.lower().replace(" ", ".") +lastname + "@company.com"
+print("\n --- Your Profile ---")
+print("Full Name : ",full_name)
+print("Generated Email : ",email)
+
+
+
+'''run this code in the specific file location so that sys argv can 
+schedule input '''
+
+
+'''check condition for sys.argv by providing condition limit'''
+
+if len(sys.argv)==2:
+    print("Usage: python e,ail_generator.py 'Full Name and last name'")
+    sys.exit()
