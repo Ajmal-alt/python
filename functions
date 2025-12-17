@@ -1,0 +1,62 @@
+#FUNCTION
+
+def great():
+    print("welcome")
+great()
+
+
+
+#FUNCTION WITH ARGUMENT
+
+def great(name):
+    print(f"Hello {name},welcome!")
+great("Ajmal")
+
+
+
+#FUNCTION WITH 2 ARGUMENTS
+
+def add(a,b):
+    print(a+b)
+add(1,2)
+
+
+
+#RETURN
+
+def add(a,b):
+    return(a+b)
+result=add(2,2)
+print(result)
+
+
+
+# IMPORT FUNCTION 
+
+#FILE1                            #FILE1 should be created as seperate file
+def add(a,b):
+    return(a+b)
+#FILE2
+from FILE1 import add             #FILE1 is a sample this code show error 
+result=add(3,3)
+print(result)
+
+
+
+#*ARGS
+
+def add(*args):                  #*args helps to declare multiple argument without changing the def function              
+    total = 0
+    for num in args:
+        total += num
+print(add(1,2,3))
+
+
+
+#KWARGS
+
+def create_profile(**kwargs) :    #**kwargs is a key value pair function
+    print("user Profile")
+    for key,value in kwargs.items():
+        print(f"{key}:{value}")
+create_profile(name = "Ajmal" , age = 21 , job = "data scientist")
