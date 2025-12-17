@@ -1,0 +1,35 @@
+#IF ELSE
+
+a=int(input("Enter Age"))
+if a >= 18:
+    print("Eligible")
+else:
+    print("Not Eligible")
+    
+    
+    
+#IF ELIF ELSE
+
+b=int(input("Enter Mark"))
+if b >=90:
+    print("A")
+elif b>=80 and b<90:
+    print("B")
+elif b>=70 and b<80:
+    print("C")
+else:
+    print("D")
+    
+ 
+ 
+#NESTED IF
+ 
+c=int(input("Enter your Age"))
+if c >= 18:
+    d=str(input("do you have licsense Yes or No"))
+    if d=='Yes' or d== 'yes':
+        print("you can drive")
+    else:
+        print("take licsense")
+else:
+    print("you cant drive")
