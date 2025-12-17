@@ -1,0 +1,56 @@
+#ARITHMATIC OPERATOR
+
+a=10
+b=3
+print(a+b)            #add
+print(a-b)            #sub
+print(a*b)            #multiply
+print(a/b)            #divide(quotient)
+print(a%b)            #remainder
+print(a**b)           #square(a^b)
+print(a//b)           #roundof decimal 
+
+
+
+#COMPARISON OPERATOR
+
+x=5
+y=10
+print(x==y)
+print(x!=y)
+print(x<y)
+print(x>y)
+
+
+
+#LOGOCAL OPERATOR
+
+g=True
+v=False
+print(g and v)
+print(g or v)
+print(not g)
+
+
+
+#EXAMPLE 1
+ 
+amount = 1200
+tax = amount*0.18
+total = amount + tax
+print(total)
+if total > 1000:
+    discount = total*0.10
+    total -= discount
+print (total)
+
+
+
+#EXAMPLE 2
+
+age = 65
+student = 'yes'
+if age>=60 or student=='yes':
+    print("yes discount")
+else:
+    print("no discount")
