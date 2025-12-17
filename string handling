@@ -1,0 +1,62 @@
+#STRING HANDLING
+
+name = "Ajmal S"
+print(name.lower())            #convert into lower case
+print(name.upper())            #convert into upper case
+print(name.capitalize())       #convert first letter into capital
+
+mobile = "9987654321"          #declare mobile number as string
+masked = mobile[:2]            #only first 2 numbers 
+masked = mobile[:-2]           #except last 2 numbers
+masked = mobile[-2:]           #only last 2 numbers 
+masked = mobile[2:]            #except first 2 numbers
+print(masked)
+ 
+ #FORMAT
+ 
+song = "shape of you"
+artist = "ed sheeran"
+formatted = f"{song.title()} - {artist.title()}"
+print(formatted)
+
+#REPLACE
+
+location = "chennai central"
+fixed_location = location.replace("chennai central","Thambaram")
+print(fixed_location)
+
+#SPLIT
+
+message = "your uber booking id is : UB12345. Please keep it safe"
+booking_id = message.split(":")[1].split(".")[0]
+print(booking_id)
+
+#USING IF ON STRING
+
+promo_msg = "use zomato100 to get 100 off on your first order"
+if "zomato100" in promo_msg:
+    print("offer applied")
+
+#FIND
+
+feedback = "the driver was polite and the ride was smooth"
+print("position is : ", feedback.find("polite"))
+
+#selecting first letter 
+
+initial = ([word[0].upper() for word in name.split()])         #giving as list
+initial = "".join([word[0].upper() for word in name.split()])  # giving as string
+print(initial)
+
+#STRIP
+
+random_input = "        Airport"
+clean = random_input.strip()
+print(random_input)                                               #without clean
+print(clean)                                                      #with clean
+
+#COUNT WORD
+
+word1 = "the trip was amazing and the car was clean"
+word_count = len(word1.split()) 
+print(word_count)
