@@ -1,0 +1,67 @@
+#FOR LOOP
+
+names = ["Saravana","Ajmal","Gowtham","Nandini","Rahul"]
+for test in names:
+    print(test.upper())
+    
+    
+
+#WHILE LOOP
+
+correct_pin = '1234'
+entered_pin=''
+while entered_pin != correct_pin:
+    entered_pin=input("enter your correct pin: ")
+print("Access granted")
+
+
+
+#BREAK 
+
+names=[1,2,3,4,9,7,6,5,8,10]
+for i in names:
+    if i==5:             
+        break            #stop execution on certain condition
+    print(i)
+
+
+
+#CONTINUE
+
+n= [10,-5,7,-9,11]
+for num in n:           
+    if num <0:
+        continue          #skip certain values
+    print(num)
+        
+        
+        
+#pass
+
+n= [10,-5,7,-9,11]
+for num in n:
+    pass                  #a place holder for future use
+
+
+
+#EXAMPLE 1
+
+count = 5
+while count>0:
+    print(f"Countdown: {count}")
+    count -= 1
+print("Time's up!")
+
+
+
+#EXAMPLE 2
+
+items = []
+while True:
+    item = input("Add item(type 'done' to finish): ")
+    if item.lower() == "done":
+        break
+    items.append(item)
+print("items in cart: ",items)
+    
+        
