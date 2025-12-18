@@ -1,0 +1,13 @@
+#TUPLE
+
+trip_summary = ("ubergo","chennai","airport",450.00,"complete")
+print(trip_summary)
+print(trip_summary[4])
+
+
+
+#TUPLE METHODS
+
+print(trip_summary.count("complete"))  #COUNT
+
+print(trip_summary.index("airport"))   #INDEXING
