@@ -1,0 +1,33 @@
+#SET
+
+uber_cities ={"chennai","banglore","delhi","chennai","banglore"}
+unique_cities=set(uber_cities)
+print(unique_cities)
+
+
+
+#SET OPERATIONS
+
+uber_cities1 = {"chennai","mumbai","banglore"}
+uber_cities2 = {"banglore","delhi","hydrabad"}
+print(uber_cities1.union(uber_cities2))                     #UNION
+
+print(uber_cities1.intersection(uber_cities2))              #INTERSECTION
+
+print(uber_cities1.difference(uber_cities2))                #DIFFERENCE
+
+uber_cities1.add("pudukkottai")                             #UPDATE AT RANDOM 
+print(uber_cities1)
+
+uber_cities1.remove("chennai")                              #REMOVE 
+print(uber_cities1)
+
+my_set = {1,2,3}
+my_set.remove(2)
+my_set.add(8)
+print(my_set)
+
+my_set.discard(2)                                          #REMOVE ONLY IF EXIST
+print(my_set)
+
+
