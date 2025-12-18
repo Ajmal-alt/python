@@ -1,0 +1,20 @@
+#ABSTRACT METHOD
+
+from abc import ABC, abstractmethod
+class FeaturePlan(ABC):
+    @abstractmethod
+    def login(self):
+        pass
+    @abstractmethod              #the abstract method need to be overrided else shows error
+    def logout(self):
+        pass
+    def checkout(self):
+        pass
+class WebApp(FeaturePlan):
+    def login(self):
+        print("WebApp Login Done")
+    def logout(self):
+        print("WebApp Logout Done")
+app=WebApp()
+app.login()
+app.logout()
