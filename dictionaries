@@ -1,0 +1,60 @@
+#DICTIONARY
+
+trip = {
+    "Trip_id": "UB1234",
+    "Pickup": "Chennai Central",
+    "Drop": ["Airport","Railway Station","Thambaram"],
+    "Fare": 450.00,
+    "driver": "Ravi",
+    "Status": "Completed"
+}
+print(trip)
+
+
+
+#DICTIONARY OPERATION
+
+print(trip["Pickup"]) 
+
+print(trip.get("Pickup"))
+
+print(trip.get("Airport"))
+
+print(trip.keys())
+
+print(trip.values())
+
+for key,value in trip.items():
+    print(key, " : ", value)
+    
+trip.update({"Car_model" : "Suzuki"})     
+print(trip)
+
+trip.update({"Car_model" : "ABC"})
+print(trip)
+
+trip.pop("Car_model")
+print(trip)
+
+print(trip["Drop"][0])
+
+trips = [
+    {"trips_id":"UB0001","pickup":"chennai","drop":"airport","fare":430},
+    {"trips_id":"UB0002","pickup":"tambaram","drop":"central","fare":320},
+    {"trips_id":"UB0003","pickup":"t nagar","drop":"velachery","fare":210}
+]
+
+for t in trips:
+    print(t["trips_id"])
+    
+tripss = {
+    "UB0001" : {"trips_id":"UB0001","pickup":"chennai","drop":"airport","fare":430},
+    "UB0002" : {"trips_id":"UB0002","pickup":"tambaram","drop":"central","fare":320},
+    "UB0003" : {"trips_id":"UB0003","pickup":"t nagar","drop":"velachery","fare":210}
+}
+
+print("UB001 fare ",tripss["UB0001"]["fare"])
+
+for tri_id,details in tripss.items():
+    print(tri_id)
+    print(details["pickup"]," to ",details["drop"])
