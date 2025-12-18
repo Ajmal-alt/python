@@ -1,4 +1,4 @@
-#INHERITANCE
+#INHERITANCE EXAMPLE 1
 
 class dad:
     def house(self):
@@ -13,7 +13,7 @@ t.factory()
 
 
 
-#INHERITANCE 
+#INHERITANCE EXAMPLE 2
 
 class dad:
     def house(self):
@@ -26,7 +26,7 @@ s.house()
 
 
 
-#INHERITANCE
+#INHERITANCE EXAMPLE 3
 
 class app1:
     def v1(self):
@@ -40,7 +40,7 @@ a.v2()
 
 
 
-#INHERITANCE
+#INHERITANCE EXAMPLE 4
 
 class dad: 
     def house (self):
@@ -68,7 +68,7 @@ s.house()
 
         
 
-#INHERITANCE
+#INHERITANCE EXAMPLE 5
 
 class v1:
     def house (self):
