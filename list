@@ -1,0 +1,52 @@
+#LIST
+
+playlist = ["Perfect","Shape of You","Beleiver","Animals"]
+fav_food = ["Pizza","Fried Chicken","Briyani","Parotta"]
+recent_location = ["Home","Airport","Work","Mall"]
+print("Spotify Playlist: ",playlist)
+print("Zomato Foods: ",fav_food)
+print("Uber Location: ",recent_location)
+
+
+
+#LIST METHODS
+
+playlist.append("Wanna be yours")              #APPEND
+print(playlist)
+
+playlist.insert(2,"Senorita")                  #INSERT
+print(playlist)
+
+playlist.remove("Beleiver")                    #REMOVE
+print("After Remove: ",playlist)
+
+playlist.pop()                                 #REMOVE LAST ELEMENT
+print("After Pop: ",playlist)
+
+playlist.reverse()                             #REVERSE THE STRING
+print("After reverse : ",playlist)
+
+print( "Count: ",playlist.count("Perfect"))   #COUNT
+
+print("Top 2 songs ", playlist[0:2])          #SLICING
+print ("Last 2 songs ", playlist[-2:])
+
+for food in fav_food:                         #ITERATION
+    print("All Food ",food)
+for song in playlist:
+    print("Composed by :", song)
+
+if "Briyani" in fav_food:                    #CONDITION
+    print("Yes")
+if "pizza" in ["Pizza","Fried Chicken","Briyani","Parotta"]:
+    print("Yes")
+
+fav_food[1]="shawarma"                       #UPDATE 
+print(fav_food)
+
+mixed= ["Ajmal",20,"5'9"]                    #MULTIPLE DATATYPE
+for a in mixed:
+    print(a)
+
+for i,location in enumerate(recent_location): #INDEXING
+    print(f"location {i}:{location}")
