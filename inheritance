@@ -1,0 +1,81 @@
+#INHERITANCE
+
+class dad:
+    def house(self):
+        print("I am from dad class")
+class test:
+    def factory(self):
+        print("I am from factory class")
+d=dad()
+d.house()
+t=test()
+t.factory()
+
+
+
+#INHERITANCE 
+
+class dad:
+    def house(self):
+        print("I am from dad class")
+class son(dad):
+    def factory(sellf):
+        print("I am from factory class")
+s=son()
+s.house() 
+
+
+
+#INHERITANCE
+
+class app1:
+    def v1(self):
+        print("orders")
+class app1_1(app1):
+    def v2(self):
+        print("refund")
+a=app1_1()
+a.v1()
+a.v2()
+
+
+
+#INHERITANCE
+
+class dad: 
+    def house (self):
+        print("red")
+class son(dad):
+    def factory (self):
+        print("white")
+    def house(self):
+        print("yellow")
+a=son()
+a.house()
+a.factory()
+
+
+
+#INHERITANCE FROM ANOTHER FILE THIS CODE SHOW ERROR 
+
+#from course_class_object.inherit_ex import dad
+class son:
+    def factory(self):
+        print("white")
+s=son()
+s.factory()
+s.house()
+
+        
+
+#INHERITANCE
+
+class v1:
+    def house (self):
+        print("i am version 1")
+class v2(v1):
+    def app2(self):
+        print("i am version 2")
+v=v2()
+v.app2()
+v.house()
