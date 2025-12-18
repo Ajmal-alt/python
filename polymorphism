@@ -1,0 +1,16 @@
+#POLYMORPHISM
+
+class dad:
+    def house(self):
+        print("house white")
+class daughter(dad):
+    def factory(self):
+        print("Factory")
+    def house(self):
+        print("house yellow")
+d=daughter()
+d.house()
+d.factory()
+        
+#IN PYTHON THERE IS NO METHOD OVERLOADING ONLY METHOD OVERRIDING 
+
