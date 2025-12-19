@@ -1,0 +1,43 @@
+#EXCEPTION HANDLING
+
+print("Welcome to Zomato")
+try:
+    number_of_items = int(input("How many items? "))
+    total_price = 200* number_of_items
+    average_price = total_price / number_of_items
+    print("Average price per item: ", average_price)
+except ZeroDivisionError:
+    print("You cannot order 0 items.")
+print("next code block")
+
+
+
+'''
+ZeroDivisionError
+ValueError
+TypeError
+IndexError
+KeyError
+AttributeError
+FileNotFoundError
+ImportError
+NameError
+IndentationError
+SyntaxError
+RuntimeError
+StopIteration
+MemoryError
+RecursionError
+Exception
+'''
+#EXCEPTION CAN BE GIVEN FOR ALL EXCEPTION
+
+
+
+#FINALLY
+
+finally:
+    print("logout")
+print("next code block")
+
+#FINALLY MUST EXECUTED EVEN THERE IS ERROR
