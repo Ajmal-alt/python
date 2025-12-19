@@ -1,0 +1,63 @@
+#JDBC CONNECTION
+
+import pymysql
+connection = pymysql.connect(
+    
+    host = 'localhost', 
+    user = 'root', 
+    password = 'root', 
+    database = 'da_master', 
+    cursorclass = pymysql.cursors.DictCursor
+);
+
+try:
+    with connection.cursor() as cursor:
+        create_query = """
+        CREATE TABLE IF NOT EXIST clinic(
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            name VARCHAR(100),
+            department VARCHAR(100)
+        );
+        """
+        cursor.execute(create_query)
+        insert_query = "INSERT INTO clinic (name, department) VALUES (%s, %s)"
+        values = [("John","IT"),("Alice","HR"),("Bob","Finance")]
+        cursor.executemany(insert_query, values)
+        connection.commit()
+        select_query = "SELECT * FROM clinic"
+        cursor.execute(select_query)
+        result = cursor.fetchall()
+        for row in result:
+            print(row)
+finally:
+    connection.close()
+    
+    
+    
+#JDBC CONNECTION 
+
+import mysql.connector
+from mysql.connector import Error
+
+try:
+    connection = mysql.connector.connect(
+        host='localhost',
+        database='da_master',
+        user='root',
+        password='root'
+        )
+    if connection.is_connected():
+        print("Connected to MySQL databas")
+        cursor = connection.cursor()
+        query = "SELECT * FROM app"
+        cursor.execute(query)
+        rows = cursor.fetchall()
+        for row in rows:
+            print(row)
+    except Error as e:
+        print("Errorwhile connecting to MySQL",e)
+    finally:
+        if connection.is_connected():
+            cursor.close()
+            connection.close()
+            print("MySQL connection is closed")
