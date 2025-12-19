@@ -1,0 +1,43 @@
+#FILE HANDLING 
+
+'''
+r - read only(file must exist)
+w - write only (overwrites or creates)
+a - append only(adds to end of file)
+r+ - read + write (file must exist)
+w+ - write + read (overwrites or creates)
+a+ - append + read (creates if not exists)
+rb - read binary
+wb - write binary
+ab append binary
+'''
+
+
+
+#EXAMPLE 1
+
+file = open("notes.txt","w")
+file.write("Welcome to Python File Handling! \n")
+file.write("This is a new file. \n")
+file.close()
+
+
+
+#WITH BLOCK
+
+with open("notes.txt","r") as file:
+    for line in file:
+        print(line.strip())
+
+
+
+#EXAMPLE 2
+
+feedback = input("Enter your feedback: ")
+with open("feedback_log.txt", "a"):
+    log.write(feedback + "\n")
+print("Thanks your feedback is saved")    
+
+
+
+#READLINE
