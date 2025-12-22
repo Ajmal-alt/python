@@ -1,0 +1,8 @@
+#CLOSURE FUNCTION
+
+def outer(msg):
+    def inner():
+        return f"message is : {msg}"
+    return inner
+greet = outer("I am Ironman")
+print(greet())
