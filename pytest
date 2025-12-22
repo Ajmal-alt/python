@@ -1,0 +1,22 @@
+#PYTEST (PYTHON TEST CASES)
+
+#MANUAL TESTING 
+
+def divide(a, b):
+    try:
+        return a/b
+    except ZeroDivisionError:
+       return "Cannot divide by zero" 
+print(divide(6,2))
+
+
+
+#PYTEST (USUNG PYTEST)
+
+#THIS IS A SEPERATE FILE WHERE WE USE THE ORIGINAL FILE NAME FOR TESTING CODE 
+# LOGIC SHOULD BE THE ORIGINAL FILE NAME
+
+from code_logic import divide
+def test_divide_regular():
+    assert divide(6,2) ==3.0
+test_divide_regular()
