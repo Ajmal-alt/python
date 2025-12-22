@@ -1,0 +1,9 @@
+total =0
+def add(amount):
+    global total
+    total += amount
+    print("i am from add()",total)
+def test():
+    print("i am from test()",total)
+add(2)
+test()
