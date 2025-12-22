@@ -1,0 +1,48 @@
+#LAMBDA FUNCTIONS
+
+add = lambda a,b : a + b
+print(add(3,2))
+
+
+
+#MAP FUNCTION(LAMBDA)
+
+fruits=['apple','banana','mango']
+result= list(map(lambda fruit : fruit.upper(),fruits))
+print(result)
+
+
+
+#FILTER FUNCTION(LAMBDA)
+
+nums=[1,2,3,4,5,6]
+even=list(filter(lambda x : x % 2==0 , nums))
+print(even)
+
+
+
+#REDUCE FUNCTION (LAMBDA)
+
+from functools import reduce
+nums = [1,2,3,4]
+total = reduce(lambda a,b : a+b,nums)
+print(total)
+
+
+
+#REDUCE (MAX NUMBER)(LAMBDA)
+
+from functools import reduce
+nums = [10,5,22,7]
+maxi = reduce(lambda a,b : a if a>b else b, nums)
+print(maxi)
+
+
+
+#EXAMPLE
+
+from functools import reduce
+prices= [250,900,1200,400,1500]
+expensive = list(filter(lambda x : x >1000, prices))
+total = reduce(lambda a,b : a+b , expensive)
+print(total)
