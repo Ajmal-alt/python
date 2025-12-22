@@ -1,0 +1,15 @@
+#GENEROTOR FUNCTION
+
+def get_numbers(n):
+    return[i for i in range(n)]
+print(get_numbers(10))
+
+
+
+#EXAMPLE USING YIELD KEYWORD
+
+def get_number(n):
+    for i in range(n):
+        yield i 
+for num in get_number(5):
+    print(num)
