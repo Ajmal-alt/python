@@ -1,3 +1,5 @@
+#PURE AND IMPURE FUNCTION
+
 total =0
 def add(amount):
     global total
