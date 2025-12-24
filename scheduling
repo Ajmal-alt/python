@@ -1,0 +1,79 @@
+#SCHEDULING
+#CRON CANT WORK ON WINDOWS ONLY WORK IN MAC AND LINUX
+
+#USING WHILE LOOP
+
+def test():
+    with open("time_log.txt","a") as f:
+        f.write(f"Script ran at : {datetime.now()}\n")
+    print(f"Task ran at : {datetime.now()}")
+while True:
+    task()
+    time.sleep(10)
+
+#AIRFLOW USED IN WSL OVER WINDOWS
+
+import pymysql
+import pandas as pd
+from dattetime import datetime
+import os
+def fetch_date_from_mysql():
+    mysql_config = {
+        
+    'host':'localhost',
+    'user': 'root',
+    'password': 'root',
+    'database': 'etl_exaple'
+    }
+    connection = pymysql.connect (**mysql_config)
+    query = 'select * from sample data'
+    df = pd.read_sql(query,Connection)
+    connect.close()
+    return df 
+def transform_data(df):
+    df_transformed = df[df['age']>30]
+    return df
+
+def write_data_to_file (df):
+    output_dir = 'home/ubuntu/expratce'
+    os.makedirs(output_dir,exists _ok=Yrue )
+    timestamp = datetime.now().strftime('%y%m%d%h%h%d')
+    file_name = f'etl_output_{timestamp}.csv'
+    file_path = os.path.join(output_dir,file_name)
+    df.to_csv(file_path, index = False)
+    print(f'Data written to {file_path}')
+def etl_progress():
+    df = fetch_data_from_mysql()
+    df_transformed = transform_data(df)
+    write_data_to_file (df_transformed)
+if __name__ == "__main__":
+    etl_process()
+
+
+
+#AIRFLOW CODE
+
+from airflow import DAG
+from airflow.operators.bash import BashOperator
+from datetime import datetime, timedelta
+default_args = {
+    'owner': 'airflow',
+    'depends_on_past': False ,
+    'email_on_failure': False ,
+    'email_on_retry': False ,
+    'retries': 1 ,
+    'retry_delay': timedelta(minutes=1),
+}
+dag = DAG(
+    'mysql_etl_dag',
+    default_args=default_args,
+    description = 'A simple ETL DAG',
+    schedule_interval=timedelta(minute=5),
+    start_date=datetime(2023, 7, 21),
+    catchup=False,
+)
+run_etl = BashOperator(
+    task_id='run_etl',
+    bash_command='bash/home/ubuntu/wrapper_script.sh',
+    dag = dag,
+)
