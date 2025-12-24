@@ -1,0 +1,18 @@
+#LOGGING
+
+import logging
+logging.basicConfig(
+    level=logging.DEBUG,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    filename='app.log',
+    filemode='w'
+)
+def divide(a,b):
+    logging.imfo(f"Dividing {a} b {b}")
+    try:
+        result = a/b
+        logging.debug(f"Result: {result}")
+        return result 
+    except ZeroDivisionError:
+        logging.error("Tried to divide by zero!")
+        return None
