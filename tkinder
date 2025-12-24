@@ -1,0 +1,40 @@
+#TKINDER (DESKTOP APPLICATION )
+
+import tkinder as tk 
+root = tk.Tk()
+root.title("My First GUI")
+root.geometry("300x200")
+label = tk.Label(root, text = "Hello, Tkinder!", font = ("Arial",14))
+label.pack(pady=20)
+def on_click():
+    label.config(text="You clicked the button!")
+button = tk.Button(root, text="Click Me", command=on_click)
+button.pack()
+root.mainloop()
+
+
+
+#EXAMPLE 2
+
+import tkinder as tk
+root = tk.TK()
+root.ttitle("Add 2 Numbers Calculator")
+root.geometry("300x200")
+tk.Label(root, text = "Enter Number 2: ").pack(pady=5)
+num1_entry = tk.Entry(root)
+num1_entry.pack()
+tk.Label(root, text="Enter Number 2: ").pack(pady=5)
+num2_entry = tk.Entry(root)
+num2_entry.pack()
+result_label = tk.Label(root, text="Result will appear here")
+result_label.pack(pady=10)
+def add_numbers():
+    try:
+        num1 = float(num1_entry.get())
+        num2 = float(num2_entry.get())
+        total = num1 + num2
+        result_label.config(text=f"Result: {total}")
+    except ValueError:
+        result_label.config(text = "Please enter valid numers")
+tk.Button(root, text="Add",command=add_numbers).pack(pady=5)
+root.mainloop
